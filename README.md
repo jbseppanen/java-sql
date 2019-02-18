@@ -49,3 +49,5 @@ Answer the following data queries. Keep track of the SQL you write by pasting it
   - account `name` should be unique.
   - account `budget` is required.
 
+Start of my commands here:
+________________________________________________________________________________________________________________________________
