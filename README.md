@@ -49,34 +49,43 @@ Answer the following data queries. Keep track of the SQL you write by pasting it
   - account `name` should be unique.
   - account `budget` is required.
 
-##  Start of online W3Schools commands here:
+##  Start of my online W3Schools commands here:
 ________________________________________________________________________________________________________________________________
 
-1.  SELECT * FROM Customers WHERE city = 'London';
+1.  SELECT * FROM customers WHERE city = 'London';
 
-2.  SELECT * FROM Customers WHERE postalcode = 1010
+2.  SELECT * FROM customers WHERE postalcode = 1010
 
-3.  SELECT phone FROM Suppliers WHERE supplierid = 11
+3.  SELECT phone FROM suppliers WHERE supplierid = 11
 
-4.  SELECT * FROM Orders ORDER BY orderdate DESC
+4.  SELECT * FROM orders ORDER BY orderdate DESC
 
-5.  SELECT * FROM suppliers WHERE (SELECT length(SupplierName) > 20 FROM products)
+5.  SELECT * FROM suppliers WHERE (SELECT length(suppliername) > 20 FROM products)
 
 6.  SELECT * FROM customers WHERE customername LIKE '%market%'
 
-7.  INSERT INTO customers(customerid, customername, contactname, address, city, postalcode, country) VALUES (null, 'The Shire', 'Bilbo Baggins', '1 Hobbit-Hole', 'Bag End', 111, 'Middle Earth')
+7.  INSERT INTO customers(customerid, customername, contactname, address, city, postalcode, country)
+    VALUES (null, 'The Shire', 'Bilbo Baggins', '1 Hobbit-Hole', 'Bag End', 111, 'Middle Earth')
 
 8.  UPDATE customers SET postalcode = 11122 WHERE contactname = 'Bilbo Baggins'
 
-9.  SELECT customername, count(*) as 'Number of Orders' FROM orders LEFT JOIN customers ON orders.customerid = customers.customerid GROUP BY orders.customerid
+9.  SELECT customername, count(*) as 'Number of Orders'
+    FROM orders LEFT JOIN customers ON orders.customerid = customers.customerid
+    GROUP BY orders.customerid
 
-10. SELECT customername, count(*) as Num_Of_Orders FROM orders LEFT JOIN customers ON orders.customerid = customers.customerid GROUP BY orders.customerid ORDER BY Num_Of_Orders DESC
+10. SELECT customername, count(*) as Num_Of_Orders
+    FROM orders LEFT JOIN customers ON orders.customerid = customers.customerid
+    GROUP BY orders.customerid
+    ORDER BY Num_Of_Orders DESC
 
-11. SELECT city, count(*) as Num_Of_Orders FROM orders LEFT JOIN customers ON orders.customerid = customers.customerid GROUP BY customers.city ORDER BY city
+11. SELECT city, count(*) as Num_Of_Orders
+    FROM orders LEFT JOIN customers ON orders.customerid = customers.customerid
+    GROUP BY customers.city
+    ORDER BY city
 
 12. DELETE FROM Customers WHERE CustomerID NOT IN (SELECT CustomerID FROM Orders)
 
-##  Start of SQLiteStudio commands here:
+##  Start of my SQLiteStudio commands here:
 ________________________________________________________________________________________________________________________________
 
 CREATE TABLE accounts (
