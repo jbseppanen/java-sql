@@ -49,7 +49,7 @@ Answer the following data queries. Keep track of the SQL you write by pasting it
   - account `name` should be unique.
   - account `budget` is required.
 
-Start of online W3Schools commands here:
+##  Start of online W3Schools commands here:
 ________________________________________________________________________________________________________________________________
 
 1.  SELECT * FROM Customers WHERE city = 'London';
@@ -75,3 +75,12 @@ ________________________________________________________________________________
 11. SELECT city, count(*) as Num_Of_Orders FROM orders LEFT JOIN customers ON orders.customerid = customers.customerid GROUP BY customers.city ORDER BY city
 
 12. DELETE FROM Customers WHERE CustomerID NOT IN (SELECT CustomerID FROM Orders)
+
+##  Start of SQLiteStudio commands here:
+________________________________________________________________________________________________________________________________
+
+CREATE TABLE accounts (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name STRING UNIQUE,
+  budget REAL NOT NULL
+)
