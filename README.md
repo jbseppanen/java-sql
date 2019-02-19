@@ -74,4 +74,4 @@ ________________________________________________________________________________
 
 11. SELECT city, count(*) as Num_Of_Orders FROM orders LEFT JOIN customers ON orders.customerid = customers.customerid GROUP BY customers.city ORDER BY city
 
-12.
+12. DELETE FROM Customers WHERE CustomerID NOT IN (SELECT CustomerID FROM Orders)
